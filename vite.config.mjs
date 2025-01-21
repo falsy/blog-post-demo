@@ -6,6 +6,7 @@ export default defineConfig({
     extensions: [".ts", ".tsx", ".js", ".mjs"]
   },
   plugins: [react()],
+  base: "/blog-post-demo/",
   server: {
     port: 4000,
     open: true,
