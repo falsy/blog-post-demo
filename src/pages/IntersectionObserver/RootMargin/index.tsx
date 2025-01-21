@@ -1,9 +1,9 @@
 import { useRef } from "react"
-import "./style.css"
 import IntersectionA from "./components/IntersectionA"
 import IntersectionB from "./components/IntersectionB"
 import IntersectionC from "./components/IntersectionC"
 import IntersectionD from "./components/IntersectionD"
+import "../style.css"
 
 export default function RootMargin() {
   const rootRef = useRef<HTMLDivElement>(null)
