@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef, useState } from "react"
 
-export default function IntersectionF({
+export default function IntersectionA({
   ref: containerRef
 }: {
   ref: RefObject<HTMLDivElement | null>
@@ -18,7 +18,7 @@ export default function IntersectionF({
       {
         threshold: 1,
         root: containerRef.current,
-        rootMargin: "0px 0px -100px 0px"
+        rootMargin: "50px 0px 0px 0px"
       }
     )
 
@@ -37,14 +37,14 @@ export default function IntersectionF({
     <div
       ref={ref}
       className={`items ${isVisible ? "visible" : "hidden"}`}
-      style={{ backgroundColor: "lightsalmon" }}
+      style={{ backgroundColor: "lightseagreen" }}
     >
       <div>
         <p>{isVisible ? "Visible" : "Hidden"}</p>
         <p>threshold: 1</p>
         <p>(요소의 전체가 뷰포트에 보일 때)</p>
-        <p>rootMargin: 0px 0px -100px 0px</p>
-        <p>(뷰포트의 아래로 100px 만큼 느리게 활성화)</p>
+        <p>rootMargin: 50px 0px 0px 0px</p>
+        <p>(뷰포트의 위로 50px 만큼 느리게 비활성화)</p>
       </div>
     </div>
   )
